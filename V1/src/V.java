@@ -1,7 +1,7 @@
 //面向对象(Object Orientiert)
 public class V {    //大括号{}:定义域
     public static void main(String[] args) {
-        /*
+
         Person p1 = new Person("Mike");
         Person p2 = new Student();
         Person p3 = new Person("Rose");
@@ -25,7 +25,7 @@ public class V {    //大括号{}:定义域
         System.out.println(p4.name + " next year will be " + (p4.grow(4)+1));  //10
         System.out.println(p4.getAge());  //9
 
-         */
+
 
         Person ps = new Person();
         Person pp1 = new Student();
@@ -81,13 +81,13 @@ class Person{  //Person是一个类
         this.id = count;
         count += 1;  // id = id + 1
     }
-    public Person(String name){  //方法同名不同参:重写 (对比重构)
+    public Person(String name){  //方法同名不同参:重构 (对比重写)
         this.name = name;  //this表示调用这个方法的对象
         this.id = count;
         count += 1;
     }
 
-    //方法的定义：可见度 回传值 方法名（传入值）{}
+    //方法的定义：可见度 回传值类型 方法名（传入值）{}
     public void speak(){
         this.setAge(3);
         System.out.println("I'm " + this.name);
@@ -145,7 +145,7 @@ class Student extends Person{
         this.student_id = 1000 + count;
     }
 
-    @Override  //方法的重构: 方法同名同参但一个属于父类，一个属于子类，子类重构父类方法
+    @Override  //方法的重写: 方法同名同参但一个属于父类，一个属于子类，子类重写父类方法
     public void speak() {
         System.out.println("I'm a student");
     }

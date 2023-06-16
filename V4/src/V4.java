@@ -146,7 +146,5 @@ class Stack{
         this.last = pre;
         return result;
     }
-
-
 }
 
